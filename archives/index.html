@@ -3,25 +3,25 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives | Hexo</title>
+  <title>Archives | Where the Way Lies</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://ychen022.github.io/hexo0/hexo0/archives/">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:title" content="Where the Way Lies">
+<meta property="og:url" content="http://yinside.us/archives/">
+<meta property="og:site_name" content="Where the Way Lies">
 <meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Where the Way Lies">
 <meta name="twitter:description">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Where the Way Lies" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
   
   <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/hexo0/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   
 </head>
@@ -33,7 +33,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/hexo0/" id="logo">Hexo</a>
+        <a href="/" id="logo">Where the Way Lies</a>
       </h1>
       
     </div>
@@ -53,7 +53,7 @@
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://ychen022.github.io/hexo0"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://yinside.us"></form>
       </div>
     </div>
   </div>
@@ -61,9 +61,68 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Hexo-on-Github--Custom-Domain-Tutorial" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/06/01/Hexo-on-Github--Custom-Domain-Tutorial/" class="article-date">
+  <time datetime="2014-06-01T19:20:57.000Z" itemprop="datePublished">Jun 1 2014</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/06/01/Hexo-on-Github--Custom-Domain-Tutorial/">Hexo on Github--Custom Domain Tutorial</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>First post dedicated to teach my darling about setting custom domains~</p>
+<ul>
+<li>I haven&#x2019;t figured out how to deal with the encoding problem (Chinese doesn&#x2019;t render yet) so this will be in english.</li>
+</ul>
+<h2 id="Before_you_begin">Before you begin</h2>
+<h3 id="Make_sure_the_blog_pages_works_properly_on_github_pages">Make sure the blog pages works properly on github pages</h3>
+<p>Click on &#x201C;Settings&#x201D;:<br><img src="images/cdtut/cn00.png" alt=""></p>
+<p>Click on the link after &#x201C;Your site is published at: &#x201C; and make sure the generated hexo page shows up:<br><img src="images/cdtut/cn0.png" alt=""></p>
+<h2 id="Create_the_CNAME_file">Create the CNAME file</h2>
+<p>In the &#x201C;source&#x201D; folder under your hexo blog directory, create a new file named &#x201C;CNAME&#x201D;.<br>Open it and edit the content to be the your domain&#x2014;no http, no www., just what you signed up for on GoDaddy:<br><img src="images/cdtut/cn1.png" alt=""></p>
+<p>Save and run </p>
+<p><figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="variable">$ </span>hexo deploy
+</pre></td></tr></table></figure><br>And you should now have this CNAME file in your github repository root:<br><img src="images/cdtut/cn2.png" alt=""></p>
+<h2 id="Change_DNS_settings_on_GoDaddy">Change DNS settings on GoDaddy</h2>
+<p>Sign into your GoDaddy account, click on &#x201C;Domains&#x201D; then &#x201C;Launch&#x201D; on your desired domain:<br><img src="images/cdtut/gd2.png" alt=""></p>
+<h3 id="Under_&#x201C;DNS_Zone_file&#x201D;">Under &#x201C;DNS Zone file&#x201D;</h3>
+<p>Remove the one record under A(Host) section. Then click on &#x201C;Add record&#x201D;<br><img src="images/cdtut/gd3.png" alt=""></p>
+<p>Selct the record type A:<br><img src="images/cdtut/gd4.png" alt=""></p>
+<p>Then fill in the record as follows:<br><img src="images/cdtut/gd5.png" alt=""></p>
+<p>When done with this one, enter another record with the same info except use 192.30.252.154 in the &#x201C;points to&#x201D; field.<br>(Don&#x2019;t forget to save the changes as prompted)</p>
+<p>By this point the setup should be done. You&#x2019;ll probably have to wait for an hour or two before the DNS changes take effect (I can go into details about this if you want clarification but gah, technical). When it&#x2019;s done, you should see the blog through your custom domain!</p>
+<p>XOXO,<br>BigCat</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yinside.us/2014/06/01/Hexo-on-Github--Custom-Domain-Tutorial/" data-id="dl0aam6ajg49k5ep" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/hexo0/2014/06/01/hello-world/" class="article-date">
+    <a href="/2014/06/01/hello-world/" class="article-date">
   <time datetime="2014-06-01T16:56:46.000Z" itemprop="datePublished">Jun 1 2014</time>
 </a>
     
@@ -75,7 +134,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/hexo0/2014/06/01/hello-world/">Hello World</a>
+      <a class="article-title" href="/2014/06/01/hello-world/">Hello World</a>
     </h1>
   
 
@@ -113,7 +172,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://ychen022.github.io/hexo0/2014/06/01/hello-world/" data-id="1e5blbjfa96v7bu3" class="article-share-link">Share</a>
+      <a data-url="http://yinside.us/2014/06/01/hello-world/" data-id="rbrq1hk7j6egx90l" class="article-share-link">Share</a>
       
       
     </footer>
@@ -138,7 +197,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/hexo0/archives/2014/06">June 2014</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06">June 2014</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -150,7 +209,11 @@
       <ul>
         
           <li>
-            <a href="/hexo0/2014/06/01/hello-world/">Hello World</a>
+            <a href="/2014/06/01/Hexo-on-Github--Custom-Domain-Tutorial/">Hexo on Github--Custom Domain Tutorial</a>
+          </li>
+        
+          <li>
+            <a href="/2014/06/01/hello-world/">Hello World</a>
           </li>
         
       </ul>
@@ -165,7 +228,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2014 John Doe<br>
+      &copy; 2014 Yang Chen<br>
       Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a>
     </div>
   </div>
@@ -183,11 +246,11 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
-<link rel="stylesheet" href="/hexo0/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/hexo0/fancybox/jquery.fancybox.pack.js"></script>
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script type="text/javascript" src="/hexo0/js/script.js"></script>
+<script type="text/javascript" src="/js/script.js"></script>
   </div>
 </body>
 </html>
