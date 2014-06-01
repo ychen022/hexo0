@@ -107,9 +107,9 @@
 <h2 id="Before_you_begin">Before you begin</h2>
 <h3 id="Make_sure_the_blog_pages_works_properly_on_github_pages">Make sure the blog pages works properly on github pages</h3>
 <p>Click on &#x201C;Settings&#x201D;:</p>
-<p><img src="images/cdtut/cn00.png" alt=""></p>
+<p><img src="/images/cdtut/cn00.png" alt=""></p>
 <p>Click on the link after &#x201C;Your site is published at: &#x201C; and make sure the generated hexo page shows up:</p>
-<p><img src="images/cdtut/cn0.png" alt=""></p>
+<p><img src="/images/cdtut/cn0.png" alt=""></p>
 <h2 id="(Temporary)_Modify__config-yml">(Temporary) Modify _config.yml</h2>
 <p>Modify those two lines in your _config.yml in the hexo project folder:</p>
 <blockquote>
@@ -118,22 +118,22 @@
 <p>I am still in the process of trying to get both the github and the custom domain to work (in terms of loading resource from the correct location)&#x2026;no prevail. Use this setting to at least make the custom domain work.</p>
 <h2 id="Create_the_CNAME_file">Create the CNAME file</h2>
 <p>In the &#x201C;source&#x201D; folder under your hexo blog directory, create a new file named &#x201C;CNAME&#x201D;.<br>Open it and edit the content to be the your domain&#x2014;no http, no www., just what you signed up for on GoDaddy:</p>
-<p><img src="images/cdtut/cn1.png" alt=""></p>
+<p><img src="/images/cdtut/cn1.png" alt=""></p>
 <p>Save and run </p>
 <p><figure class="highlight"><table><tr><td class="gutter"><pre>1
 </pre></td><td class="code"><pre><span class="variable">$ </span>hexo deploy
 </pre></td></tr></table></figure><br>And you should now have this CNAME file in your github repository root:</p>
-<p><img src="images/cdtut/cn2.png" alt=""></p>
+<p><img src="/images/cdtut/cn2.png" alt=""></p>
 <h2 id="Change_DNS_settings_on_GoDaddy">Change DNS settings on GoDaddy</h2>
 <p>Sign into your GoDaddy account, click on &#x201C;Domains&#x201D; then &#x201C;Launch&#x201D; on your desired domain:</p>
-<p><img src="images/cdtut/gd2.png" alt=""></p>
+<p><img src="/images/cdtut/gd2.png" alt=""></p>
 <h3 id="Under_&#x201C;DNS_Zone_file&#x201D;">Under &#x201C;DNS Zone file&#x201D;</h3>
 <p>Remove the one record under A(Host) section. Then click on &#x201C;Add record&#x201D; </p>
-<p><img src="images/cdtut/gd3.png" alt=""></p>
+<p><img src="/images/cdtut/gd3.png" alt=""></p>
 <p>Selct the record type A:</p>
-<p><img src="images/cdtut/gd4.png" alt=""></p>
+<p><img src="/images/cdtut/gd4.png" alt=""></p>
 <p>Then fill in the record as follows:</p>
-<p><img src="images/cdtut/gd5.png" alt=""></p>
+<p><img src="/images/cdtut/gd5.png" alt=""></p>
 <p>When done with this one, enter another record with the same info except use 192.30.252.154 in the &#x201C;points to&#x201D; field.<br>(Don&#x2019;t forget to save the changes as prompted)</p>
 <p>By this point the setup should be done. You&#x2019;ll probably have to wait for an hour or two before the DNS changes take effect (I can go into details about this if you want clarification but gah, technical). When it&#x2019;s done, you should see the blog through your custom domain!</p>
 <p>XOXO,<br>BigCat</p>
